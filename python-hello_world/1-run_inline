@@ -1,3 +1,2 @@
 #!/bin/bash
-echo $PYCODE | python3 # first step, send print commant in pycode, the second step print this commant
-# after, send commant to python interpreter
+echo $PYCODE | python3 # first step, send print commant in pycode, the second step print this commant after, send commant to python interpreter
