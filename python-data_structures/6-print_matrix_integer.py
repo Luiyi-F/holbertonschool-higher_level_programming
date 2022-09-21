@@ -3,6 +3,9 @@
 
 def print_matrix_integer(matrix=[[]]):
     for indx in matrix:
-        for value in indx:
-            print("{:d}".format(value), end=" ")
+        for value in range(len(indx)):
+            if value < len(indx):
+                print("{:d} ".format(indx[value]), end="")
+            else:
+                print("{:d}".format(indx[value]), end="")
         print("")
