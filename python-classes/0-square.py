@@ -2,6 +2,8 @@
 """
 Create first class Square
 """
+
+
 class Square:
     """Square class"""
     pass
