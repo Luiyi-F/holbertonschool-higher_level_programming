@@ -13,15 +13,15 @@ class Square:
         self.__size = size
         self.__position = position
 
+        if not isinstance(position, tuple) or len(position) != 2 \
+                or not all(isinstance(position, int) for number in position) \
+                or not all(number >= 0 for number in position):
+            raise (TypeError("position must be a tuple of 2 positive integers"))
+
     @property
     def size(self):
         """getter for size"""
         return (self.__size)
-
-    @property
-    def position(self):
-        """getter for position"""
-        return (self.__position)
 
     @size.setter
     def size(self, value):
@@ -32,6 +32,11 @@ class Square:
             raise (ValueError("size must be >= 0"))
 
         self.__size = value
+
+    @property
+    def position(self):
+        """getter for position"""
+        return (self.__position)
 
     @position.setter
     def position(self, value):
