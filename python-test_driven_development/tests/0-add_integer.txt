@@ -9,26 +9,49 @@ This is an example text file in reStructuredText format.  First import
 
     >>> add_integer = __import__("0-add_integer").add_integer
 
-Now use it sum for two intgers:
+Checking with two intgers:
     >>> add_integer(1, 2)
     3
     >>> add_integer(5, 3)
     8
 
-Now use it sum for one intgers:
+Checking with one intger:
     >>> add_integer(5)
     103
     >>> add_integer(8)
     106
 
-Now use it sum for two intgers, one negative:
-    >>> add_integer(5, -3)
-    2
-    >>> add_integer(-4, 4)
-    0
+Checking with two floats:
+    >>> add_integer(5.0, 3.0)
+    8
+    >>> add_integer(4.0, 4.0)
+    8
 
-Now use it sum for one float and one integer:
+Checking with one float and one integer:
     >>> add_integer(3.6, 2)
     5
     >>> add_integer(2, 4.7)
     6
+
+Checking Type:
+    >>> type(add_integer(2,3))
+    <class 'int'>
+
+    >>> type(add_integer(2.0, 3))
+    <class 'int'>
+
+Checking bad input:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ....
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(float('inf'), 2)
+    Traceback (most recent call last):
+    ....
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float("nan"), 2)
+    Traceback (most recent call last):
+    ....
+    ValueError: cannot convert float NaN to integer
