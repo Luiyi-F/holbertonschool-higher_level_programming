@@ -34,13 +34,16 @@ Checking with one float and one integer:
     6
 
 Checking Type:
-    >>> type(add_integer(2,3))
-    <class 'int'>
-
     >>> type(add_integer(2.0, 3))
+    <class 'int'>
+    >>> type(add_integer(2.0, 3.0))
     <class 'int'>
 
 Checking bad input:
+    >>> add_integer(-3, -7)
+    -10
+    >>> add_integer(-3, 7)
+    4
     >>> add_integer()
     Traceback (most recent call last):
     ....
