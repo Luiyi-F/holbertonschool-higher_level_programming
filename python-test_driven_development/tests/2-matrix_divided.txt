@@ -6,7 +6,72 @@ Using ``matrix_divided``
 
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
+Checking with div one intger:
+
     >>> matrix = [[1, 2, 3], [4, 5, 6]]
 
     >>> matrix_divided(matrix, 3)
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+
+Checking with div one string:
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+    >>> matrix_divided(matrix, "string")
+    Traceback (most recent call last):
+    ....
+    TypeError: div must be a number
+
+
+Checking with div 0:
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ....
+    ZeroDivisionError: division by zero
+
+
+Checking with not intger list:
+
+    >>> matrix = [['a', '2', 'b'], ["f", "5", "65"]]
+
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    ....
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Checking with not rectangle list:
+
+    >>> matrix = ([1, 2, 3], [4, 5, 6])
+
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ....
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Checking with missing one argument:
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+    >>> matrix_divided(matrix)
+    Traceback (most recent call last):
+    ....
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+    >>> matrix_divided(2)
+    Traceback (most recent call last):
+    ....
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+
+Checking with missing two arguments:
+
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    ....
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
