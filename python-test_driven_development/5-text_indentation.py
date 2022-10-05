@@ -18,17 +18,16 @@ def text_indentation(text):
     Return indentation text
     """
     if not isinstance(text, str):
-        raise (TypeError("text mus be a string"))
+        raise (TypeError("text must be a string"))
 
-    for indx in range(len(text)):
-        if text[indx] == ' ' and \
-                text[indx - 1] == '.' or \
-                text[indx - 1] == '?' or \
-                text[indx - 1] == ':':
+    for chars in range(len(text)):
+        if text[chars] == ' ' and\
+                text[chars - 1] == '.' or\
+                text[chars - 1] == '?' or\
+                text[chars - 1] == ':':
             continue
-
-        print(text[indx], end="")
-        if text[indx] == '.' or \
-                text[indx] == '?' or \
-                text[indx] == ':':
+        print(text[chars], end="")
+        if text[chars] == '.' or\
+                text[chars] == '?' or\
+                text[chars] == ':':
             print("\n")
