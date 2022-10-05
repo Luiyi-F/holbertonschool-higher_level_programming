@@ -12,7 +12,7 @@ My name is John Smith
 
 def say_my_name(first_name, last_name=""):
     """
-    Given two arguments first name and last name 
+    Given two arguments first name and last name
     (both string)
     Return a message with both string
     """
