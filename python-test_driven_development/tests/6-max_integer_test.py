@@ -11,6 +11,9 @@ class TestMaxInteger(unittest.TestCase):
     in different cases"""
     def test_maxint(self):
         # Test max_integer when list >= 0
-        self.assertAlmostEqual(max_integer([0]), 0)
-        self.assertAlmostEqual(max_integer([1, 2, 3, 4]), 4)
-        self.assertAlmostEqual(max_integer([10, 34, 12, 15]), 34)
+        self.assertAlmostEqual(max_integer([6]), 6)
+        self.assertAlmostEqual(max_integer([6, 3, 4]), 6)
+        self.assertAlmostEqual(max_integer([6, 2, 7, 8]), 8)
+        self.assertAlmostEqual(max_integer([-10, 34, 12, 15]), 34)
+        self.assertAlmostEqual(max_integer([-2, -7, -9, -10]), -2)
+        self.assertAlmostEqual(max_integer([]), None)
