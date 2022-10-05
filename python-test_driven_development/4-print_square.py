@@ -29,4 +29,4 @@ def print_square(size):
     for height in range(size):
         for width in range(size):
             print("#", end="")
-        print().
+        print()
