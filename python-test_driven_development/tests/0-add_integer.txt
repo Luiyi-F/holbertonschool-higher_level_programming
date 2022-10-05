@@ -4,9 +4,6 @@ The ``0-add_integer`` module
 Using ``add_integer``
 -------------------
 
-This is an example text file in reStructuredText format.  First import
-``factorial`` from the ``example`` module:
-
     >>> add_integer = __import__("0-add_integer").add_integer
 
 Checking with two intgers:
