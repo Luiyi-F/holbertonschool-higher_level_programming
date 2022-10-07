@@ -4,9 +4,6 @@ Module with Class Rectangle
 """
 
 
-import re
-
-
 class Rectangle:
     """Initialization Rectangle class"""
     number_of_instances = 0
