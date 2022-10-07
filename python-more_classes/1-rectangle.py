@@ -22,7 +22,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """getter"""
+        """getter width"""
         if not isinstance(value, int):
             raise (TypeError("width must be an integer"))
         if value < 0:
