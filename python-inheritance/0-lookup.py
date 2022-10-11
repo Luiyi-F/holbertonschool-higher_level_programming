@@ -6,7 +6,7 @@ in to list
 
 Example:
 >>> lookup(int):
-['__abs__', '__add__', '__and__', '__bool__', '__ceil__', 
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__',
 '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__',
 ....]
 """
