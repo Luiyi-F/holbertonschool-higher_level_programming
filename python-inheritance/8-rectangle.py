@@ -11,7 +11,8 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """
-        width and height is a private instance
+        Width and height is a private instance
+
         Validation width and height must be
         positive integers
         """
