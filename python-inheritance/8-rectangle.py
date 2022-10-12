@@ -13,7 +13,7 @@ class Rectangle(BaseGeometry):
         """
         width and height is a private instance
         Validation width and height must be
-        positive integers 
+        positive integers
         """
         BaseGeometry.integer_validator(self, "width", width)
         BaseGeometry.integer_validator(self, "height", height)
