@@ -13,7 +13,10 @@ True
 
 
 def is_kind_of_class(obj, a_class):
-    """Return True if the object is instance
+    """
+    Return True if the object is instance
     of the class
-    Arguments: Object(obj), object class(a_class)"""
+    
+    Arguments: Object(obj), object class(a_class)
+    """
     return isinstance(obj, a_class)
