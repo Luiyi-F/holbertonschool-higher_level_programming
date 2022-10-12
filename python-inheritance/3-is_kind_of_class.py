@@ -5,7 +5,7 @@ return True if the object is isntace of the class,
 otherwise False
 
 Example:
->>> def is_kind_of_class(4, int):
+>>> is_kind_of_class(4, int):
 True
 >>> is_kind_of_class(4, object):
 True
