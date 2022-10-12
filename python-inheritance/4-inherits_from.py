@@ -16,4 +16,4 @@ def inherits_from(obj, a_class):
     """Return True if the object is a instance
         directly or indirectly of a class
     Arguments: Object(obj), object class(a_class)"""
-    return isinstance(obj, a_class)
+    return type(obj) is not a_class
