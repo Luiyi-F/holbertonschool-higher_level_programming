@@ -4,9 +4,6 @@ Module BaseGeometry class
 """
 
 
-from tokenize import single_quoted
-
-
 class BaseGeometry:
     """Initization BaseGeometry"""
 
