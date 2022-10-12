@@ -7,7 +7,7 @@ otherwise False
 Example:
 >>> def is_kind_of_class(4, int):
 True
->>> is_same_class(4, object):
+>>> is_kind_of_class(4, object):
 True
 """
 
