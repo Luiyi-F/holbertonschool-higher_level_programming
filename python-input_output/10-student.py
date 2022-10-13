@@ -25,8 +25,7 @@ class Student:
         for JSON searilaztion
         verification if attrs is a list
         """
-        if type(attrs) is list and [type(idx) == str for idx in attrs]:
-            return {letter: letter_2 for letter, letter_2
-                    in self.__dict__.items() if letter in attrs}
+        if type(attrs) is list and all([type(idx) == str for idx in attrs]):
+            return {lr: lr_2 for lr, lr_2 in self.__dict__.items() if lr in attrs}
 
         return (self.__dict__)
