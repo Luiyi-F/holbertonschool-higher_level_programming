@@ -3,6 +3,8 @@
 Mudule 12-pascal_triangle with pascal_trinagle(n)
 Return list with form a triangle
 """
+
+
 def pascal_triangle(n):
     """
     Return a list of pascal trinagle
