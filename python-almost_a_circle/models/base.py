@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module with Base class
+Module base with Base class
 """
 
 
