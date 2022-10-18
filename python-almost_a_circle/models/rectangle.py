@@ -101,5 +101,9 @@ class Rectangle(Base):
     def __str__(self):
         """Print message for see id, x & y and width & height"""
         cls_name = self.__class__.__name__
-        return "[{}] ({}) {}/{} - {}/{}".format(cls_name, self.id, self.__x,
-                                                self.__y, self.__width, self.__height)
+        return "[{}] ({}) {}/{} - {}/{}".format(cls_name,
+                                                self.id,
+                                                self.__x,
+                                                self.__y,
+                                                self.__width,
+                                                self.__height)
