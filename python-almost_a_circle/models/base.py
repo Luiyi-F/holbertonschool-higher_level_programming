@@ -13,6 +13,8 @@ class Base():
     def __init__(self, id=None):
         """
         Initialization Bese class
+        Args:
+            id = None
         """
         if id is not None:
             self.id = id
