@@ -48,4 +48,8 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """Return attribute dictionary"""
-        pass
+        Squ_dict = {"id": self.id,
+                    "size": self.size,
+                    "x": self.x,
+                    "y": self.y}
+        return Squ_dict
