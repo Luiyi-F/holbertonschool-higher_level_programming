@@ -35,3 +35,17 @@ class Square(Rectangle):
         cls_name = self.__class__.__name__
         msg_form = "[{}] ({:d}) {:d}/{:d} - {:d}"
         return msg_form.format(cls_name, self.id, self.x, self.y, self.width)
+
+    def update(self, *args, **kwargs):
+        """Argument function"""
+        args_list = ['id', 'size', 'x', 'y']
+        if args is not None and len(args) != 0:
+            for idx in range(len(args)):
+                setattr(self, args_list[idx], args[idx])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Return attribute dictionary"""
+        pass
