@@ -8,6 +8,7 @@ from .base import Base
 
 class Rectangle(Base):
     """
+    Create Rectangle class
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -16,9 +17,9 @@ class Rectangle(Base):
         Args:
             width
             height
-            x = 0
-            y = 0
-            id = None
+            x=0
+            y=0
+            id=None
         """
         super().__init__(id)
         self.width = width
@@ -101,9 +102,6 @@ class Rectangle(Base):
     def __str__(self):
         """Print message for see id, x & y and width & height"""
         cls_name = self.__class__.__name__
-        return "[{}] ({}) {}/{} - {}/{}".format(cls_name,
-                                                self.id,
-                                                self.__x,
-                                                self.__y,
-                                                self.__width,
-                                                self.__height)
+        msg_form = "[{}] ({}) {}/{} - {}/{}"
+        return msg_form.format(cls_name, self.id, self.__x, self.__y,
+                               self.__width, self.__height)
