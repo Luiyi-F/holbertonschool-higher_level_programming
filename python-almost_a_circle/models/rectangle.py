@@ -112,6 +112,9 @@ class Rectangle(Base):
         if args is not None and len(args) != 0:
             for idx in range(len(args)):
                 setattr(self, args_list[idx], args[idx])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """Returns dictionary function"""
