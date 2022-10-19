@@ -105,3 +105,18 @@ class Rectangle(Base):
         msg_form = "[{}] ({}) {}/{} - {}/{}"
         return msg_form.format(cls_name, self.id, self.__x, self.__y,
                                self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """Args function"""
+        args_list = ['id', 'width', 'height', 'x', 'y']
+        if args != None and len(args) != 0:
+            for idx in range(len(args)):
+                setattr(self, args_list[idx], args[idx])
+
+    def to_dictionary(self):
+        """Returns dictionary function"""
+        Rec_dict = {"id": self.id,
+                    "width": self.__width,
+                    "height": self.__height,
+                    "x": self.__x, "y": self.__y}
+        return Rec_dict
