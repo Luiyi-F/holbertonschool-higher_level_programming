@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+Module square with Square class
 """
 from .rectangle import Rectangle
 
