@@ -12,13 +12,19 @@ class TestRectangle(unittest.TestCase):
     def setUp(self):
         Base._Base__nb_objects = 0
 
-    def test_intId(self):
+    def test_IntId(self):
         """Integer id assignation"""
         r = Rectangle(12, 4)
         self.assertEqual(r.id, 1)
 
-        r2 = Rectangle(12, 4, 1, 1, 5)
-        self.assertEqual(r2.id, 5)
+        r1 = Rectangle(12, 4, 1)
+        self.assertEqual(r1.id, 1)
+
+        r2 = Rectangle(12, 4, 1, 1)
+        self.assertEqual(r2.id, 1)
+
+        r3 = Rectangle(12, 4, 1, 1, 5)
+        self.assertEqual(r3.id, 5)
 
     def test_NegParameter(self):
         """Negative integer in parameter assignation"""
@@ -35,3 +41,6 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             r = Rectangle(10, '2')
+
+        with self.assertRaises(TypeError):
+            r = Rectangle(10, 2)
