@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import string
 import unittest
 
 from models.base import Base
@@ -26,3 +27,17 @@ class TestBase(unittest.TestCase):
         """Negative integer id assignation"""
         b = Base(-12)
         self.assertEqual(b.id, -12)
+    
+    def test_StrId(self):
+        """string id assignation"""
+        b = Base("Id")
+        self.assertEqual(b.id, "Id")
+
+    def test_to_json_string(self):
+        """to json string"""
+        string = Base.to_json_string(None)
+        self.assertEqual(string, "[]")
+
+    def test_from_json_string(self):
+        string = Base.from_json_string(None)
+        self.assertEqual(string, [])
