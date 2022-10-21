@@ -3,8 +3,6 @@ import string
 import unittest
 
 from models.base import Base
-from models.rectangle import Rectangle
-from models.square import Square
 
 
 class TestBase(unittest.TestCase):
@@ -27,7 +25,7 @@ class TestBase(unittest.TestCase):
         """Negative integer id assignation"""
         b = Base(-12)
         self.assertEqual(b.id, -12)
-    
+
     def test_StrId(self):
         """string id assignation"""
         b = Base("Id")
