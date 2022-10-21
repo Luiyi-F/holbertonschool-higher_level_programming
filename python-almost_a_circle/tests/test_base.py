@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import string
 import unittest
 
 from models.base import Base
@@ -13,7 +12,7 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         self.assertEqual(b1.id, 1)
 
-    def test_intId(self):
+    def test_IntId(self):
         """Integer id assignation"""
         b = Base(12)
         self.assertEqual(b.id, 12)
