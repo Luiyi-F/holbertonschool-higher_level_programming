@@ -8,9 +8,6 @@ from models.base import Base
 class TestBase(unittest.TestCase):
     """Initialization Test base class"""
 
-    def setUp(self):
-        Base._Base__nb_objects = 0
-
     def test_MissId(self):
         """Missing id assignation"""
         b1 = Base()
