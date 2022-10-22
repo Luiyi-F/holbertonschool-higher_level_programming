@@ -71,6 +71,21 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(sq.y, 11)
         self.assertEqual(sq.id, 11)
 
+    def test_save_to_empty(self):
+        Square.save_to_file([])
+
+        with open("Square.json", 'r', encoding="utf-8") as f:
+            self.assertEqual(f.read(), '[]')
+        os.remove("Square.json")
+
+    def test_save_exists(self):
+        Square.save_to_file([Square(2, 4, 6)])
+
+        with open("Square.json", 'r') as f:
+            self.assertEqual(
+                f.read(), '[{"id": 1, "size": 2, "x": 4, "y": 6}]')
+        os.remove("Square.json")
+
 
 if __name__ == '__main__':
     unittest.main()
