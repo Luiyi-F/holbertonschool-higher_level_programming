@@ -5,6 +5,7 @@ Rectangle test
 import unittest
 import sys
 import io
+import os
 
 from models.base import Base
 from models.rectangle import Rectangle
@@ -119,6 +120,9 @@ class TestRectangle(unittest.TestCase):
     def test_save_to_empty(self):
         Rectangle.save_to_file([])
 
+        with open("Rectangle.json", 'r', encoding="utf-8") as f:
+            self.assertEqual(f.read(), '[]')
+        os.remove("Rectangle.json")
 
 
 if __name__ == '__main__':
