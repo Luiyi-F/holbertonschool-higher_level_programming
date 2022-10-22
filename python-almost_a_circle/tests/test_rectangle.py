@@ -51,13 +51,10 @@ class TestRectangle(unittest.TestCase):
         """string in parameter assignation"""
         with self.assertRaises(TypeError):
             r = Rectangle('12', 4)
-
         with self.assertRaises(TypeError):
             r1 = Rectangle(12, '4')
-
         with self.assertRaises(TypeError):
             r2 = Rectangle(12, 4, '1')
-
         with self.assertRaises(TypeError):
             r3 = Rectangle(12, 4, 1, '1')
 
