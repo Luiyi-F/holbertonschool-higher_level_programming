@@ -48,7 +48,7 @@ class TestBase(unittest.TestCase):
         string = Base.from_json_string(None)
         self.assertEqual(string, [])
 
-    def test_SaveToFile(self):
+    def test_SaveToFileRect(self):
         """Save rectangle"""
         output = io.StringIO()
         sys.stdout = output
@@ -56,6 +56,8 @@ class TestBase(unittest.TestCase):
         with open("Rectangle.json", 'r', encoding="utf-8") as f:
             print(f.read())
         self.assertEqual(output.getvalue(), "[]\n")
+
+    def test_SaveSqr(self):
         """Save Square"""
         output = io.StringIO()
         sys.stdout = output
