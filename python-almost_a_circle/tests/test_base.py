@@ -3,6 +3,8 @@
 Base Test
 """
 import unittest
+import sys
+import io
 
 from models.base import Base
 from models.rectangle import Rectangle
@@ -45,6 +47,14 @@ class TestBase(unittest.TestCase):
     def test_from_json_string(self):
         string = Base.from_json_string(None)
         self.assertEqual(string, [])
+
+    def test_SaveToFile(self):
+        output = io.StringIO()
+        sys.stdout = output
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", 'r', encoding="utf-8") as f:
+            print(f.read())
+        self.assertEqual(output.getvalue(), "[]\n")
 
 
 if __name__ == '__main__':
