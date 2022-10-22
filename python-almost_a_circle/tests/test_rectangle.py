@@ -38,7 +38,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r1 = Rectangle(12, -4)
         with self.assertRaises(ValueError):
-            r = Rectangle(-12, 4, -1)
+            r = Rectangle(12, 4, -1)
         with self.assertRaises(ValueError):
             r1 = Rectangle(12, 4, 1, -1)
         with self.assertRaises(ValueError):
@@ -83,7 +83,7 @@ class TestRectangle(unittest.TestCase):
         """Test for display"""
         output = io.StringIO()
         sys.stdout = output
-        Rectangle(2, 2).display()
+        Rectangle(2, 2, 1, 1).display()
         self.assertEqual(output.getvalue(), '##\n##\n')
 
     def test_Update(self):
