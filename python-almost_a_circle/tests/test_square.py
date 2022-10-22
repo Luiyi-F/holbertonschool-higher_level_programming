@@ -71,6 +71,13 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(sq.y, 11)
         self.assertEqual(sq.id, 11)
 
+    def test_RectangleCreate3(self):
+        sq = Square.create(**{'id': 89, 'size': 1, 'x': 2, 'y': 3})
+        self.assertEqual(sq.id, 89)
+        self.assertEqual(sq.size, 1)
+        self.assertEqual(sq.x, 2)
+        self.assertEqual(sq.y, 3)
+
     def test_save_to_empty(self):
         Square.save_to_file([])
 
