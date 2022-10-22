@@ -84,7 +84,7 @@ class TestRectangle(unittest.TestCase):
         output = io.StringIO()
         sys.stdout = output
         Rectangle(2, 2, 1, 1).display()
-        self.assertEqual(output.getvalue(), '##\n##\n')
+        self.assertEqual(output.getvalue(), '\n ##\n ##\n')
 
     def test_Update(self):
         """Result update"""
@@ -111,6 +111,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.id, 89)
         self.assertEqual(r.width, 1)
         self.assertEqual(r.height, 2)
+
+    def test_save_to_empty(self):
+        Rectangle.save_to_file([])
+
 
 
 if __name__ == '__main__':
