@@ -49,10 +49,18 @@ class TestBase(unittest.TestCase):
         self.assertEqual(string, [])
 
     def test_SaveToFile(self):
+        """Save rectangle"""
         output = io.StringIO()
         sys.stdout = output
         Rectangle.save_to_file(None)
         with open("Rectangle.json", 'r', encoding="utf-8") as f:
+            print(f.read())
+        self.assertEqual(output.getvalue(), "[]\n")
+        """Save Square"""
+        output = io.StringIO()
+        sys.stdout = output
+        Square.save_to_file(None)
+        with open("Square.json", 'r', encoding="utf-8") as f:
             print(f.read())
         self.assertEqual(output.getvalue(), "[]\n")
 
