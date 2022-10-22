@@ -83,6 +83,10 @@ class TestRectangle(unittest.TestCase):
         """Test for display"""
         output = io.StringIO()
         sys.stdout = output
+        Rectangle(2, 2).display()
+        self.assertEqual(output.getvalue(), '##\n##\n')
+        output = io.StringIO()
+        sys.stdout = output
         Rectangle(2, 2, 1, 1).display()
         self.assertEqual(output.getvalue(), '\n ##\n ##\n')
 
