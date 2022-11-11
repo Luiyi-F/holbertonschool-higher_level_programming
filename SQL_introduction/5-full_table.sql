@@ -1,2 +1,2 @@
 -- Script for print description for table
-SHOW TABLE first_table;
+SHOW CREATE TABLE first_table;
