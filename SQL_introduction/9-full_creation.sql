@@ -1,10 +1,6 @@
 -- Script create full table
-CREATE TABLE IF NOT EXISTS second_table (
-    id INT,
-    name VARCHAR(256),
-    score INT
-);
--- Script for insert a new row
+CREATE TABLE IF NOT EXISTS second_table (id INT, name VARCHAR(256), score INT);
+-- Insert a new row
 INSERT INTO second_table (id, name, score) VALUES 
 (1, 'John', 10),
 (2, 'Alex', 3),
