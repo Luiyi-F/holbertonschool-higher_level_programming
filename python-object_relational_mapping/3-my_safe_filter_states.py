@@ -16,7 +16,7 @@ def mysqlconnect():
 
     cursor = db_connection.cursor()
     cursor.execute("SELECT * FROM states WHERE states.name\
-        %(username)s ORDER BY states.id", {"username": sys.argv[4]})
+       = %(username)s ORDER BY states.id", {"username": sys.argv[4]})
     states = cursor.fetchall()
 
     for state in states:
