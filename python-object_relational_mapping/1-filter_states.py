@@ -10,12 +10,13 @@ def mysqlconnect():
         user=sys.argv[1],
         passwd=sys.argv[2],
         db=sys.argv[3],
+        host="localhost",
         port=3306
     )
 
     cursor = db_connection.cursor()
-    cursor.execute("SELECT id, name FROM states WHERE name LIKE 'N%'"
-                   "COLLATE Latin1_General_CS;")
+    cursor.execute("SELECT * FROM states WHERE name\
+         LIKE BINARY 'N%' ORDER BY states.id ASC")
     states = cursor.fetchall()
 
     for state in states:
