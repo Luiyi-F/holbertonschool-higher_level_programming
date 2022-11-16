@@ -15,7 +15,7 @@ def mysqlconnect():
 
     cursor = db_connection.cursor()
     cursor.execute("SELECT * FROM states")
-    states = cursor.fetcharll()
+    states = cursor.fetchall()
 
     for state in states:
         print(state)
@@ -23,5 +23,6 @@ def mysqlconnect():
     cursor.close()
     db_connection.close()
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     mysqlconnect()
