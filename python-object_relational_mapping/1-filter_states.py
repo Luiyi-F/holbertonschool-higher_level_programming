@@ -14,7 +14,7 @@ def mysqlconnect():
     )
 
     cursor = db_connection.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'"
+    cursor.execute("SELECT id, name FROM states WHERE name LIKE 'N%'"
                    "COLLATE Latin1_General_CS;")
     states = cursor.fetchall()
 
