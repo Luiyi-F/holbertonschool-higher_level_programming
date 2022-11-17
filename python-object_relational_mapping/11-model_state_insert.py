@@ -14,7 +14,7 @@ def mysqlconnect():
     Base.metadata.create_all(engine)
 
     with Session(engine) as session:
-        state = State(name="Lousiana")
+        state = State(name="Louisiana")
         session.add(state)
         session.commit()
         print(state.id)
