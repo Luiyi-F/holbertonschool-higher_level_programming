@@ -18,10 +18,9 @@ def mysqlconnect():
     cursor.execute("SELECT cities.name FROM cities\
     JOIN states ON cities.state_id = states.id\
     WHERE states.name = %(state)s ORDER BY cities.id", {"state": sys.argv[4]})
-    states = cursor.fetchall()
+    cities = cursor.fetchall()
 
-    for state in states:
-        print(state)
+    print(", ".join(city[0] for city in cities))
 
     cursor.close()
     db_connection.close()
