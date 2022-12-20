@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // create function for print the size with diferent char
-const Rectangle = require('./4-rectangle');
+const Rectangle = require('./5-square');
 
 module.exports = class square extends Rectangle {
   constructor (size) {
