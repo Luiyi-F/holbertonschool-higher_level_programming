@@ -8,5 +8,5 @@ if (argv.length <= 3) {
   const args = argv.map(Number)
     .slice(2, argv.length)
     .sort((a, b) => a - b);
-  console.log(args.length - 2);
+  console.log(args[args.length - 2]);
 }
